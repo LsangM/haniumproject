@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+  white-space: pre-line;
+  overflow-x: hidden;
+  height: 100vh;
+  font-family: 'Noto Sans KR';
+  display: inline;
+}

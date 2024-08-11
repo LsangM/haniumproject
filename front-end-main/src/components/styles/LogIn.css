@@ -1,0 +1,17 @@
+.logInWrapper {
+    display: grid;
+    place-items: center;
+    min-height: 80vh;
+}
+
+.logInDiv .signUpLink {
+    font-size: 14px;
+}
+
+.logInDiv .TextField {
+    width: 300px;
+}
+
+.logInDiv .LogInButton {
+    width: 300px;
+}

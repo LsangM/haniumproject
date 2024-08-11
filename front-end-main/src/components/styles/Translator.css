@@ -1,0 +1,210 @@
+
+textarea {
+    width: 85%;
+    resize: none;
+    text-align: justify;
+    font-family: 'Noto Sans KR';
+    font-size: 1rem;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.content {
+    flex: 1;
+    height: 100vh;
+    width: 100%;
+    margin-left: 0;
+    transition: margin-left 0.3s ease-in-out;
+    overflow: auto;
+}
+
+.content.expanded {
+    height: 100vh;
+    margin-left: -300px;
+}
+
+.divider {
+    width: 80%;
+    border-bottom: 1px solid #c4c4c4;
+    margin: 10px auto 20px;
+}
+
+.contentContainer {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 1288px;
+    color: #222222;
+    font-weight: 100;
+}
+
+.fastTranlation {
+    text-align: justify;
+    min-width: 200px;
+    max-width: 520px;
+    padding: 20px;
+    position: absolute;
+    width: unset;
+    z-index: 10;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px 0 rgba(212,216,229,.3), 0 0 1px 0 rgba(0,0,0,.4);
+    box-sizing: border-box;
+}
+
+.left,
+.right {
+    flex: 1;
+}
+
+.left button {
+    margin-bottom: 20px;
+}
+
+.output {
+    text-align: justify;
+    padding: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10px;
+}
+
+.output:hover {
+    background-color: #e3e3e3;
+    cursor: pointer;
+}
+
+.right .resultsDiv {
+    min-height: 850px;
+    border: 1px solid #f6f6f6;
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    margin: 10px;
+    margin-top: 0;
+    padding-bottom: 20px;
+    color: #222222;
+}
+
+.result {
+    width: auto;
+    display: flex;
+    text-align: justify;
+    padding: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: relative;
+    justify-content: space-between;
+}
+
+.resultButtons {
+    text-align: center;
+    margin-left: 5px;
+    padding: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    user-select: none;
+}
+
+.resultButtons div {
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.resultButtons:hover {
+    opacity: 1;
+}
+
+.editingDiv {
+    display: inline;
+}
+
+.resultDiv {
+    position: relative;
+}
+
+.workTitleDiv {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.workTitleInput {
+    outline: none;
+    font-size: 17px;
+    border: 0;
+    border-bottom: solid #aaaaaa 1px;
+    margin: 17px;
+    padding: 5px;
+    text-align: center;
+    background: none;
+    max-width: 200px;
+    transition: all 0.3s;
+}
+
+.left .leftDiv {
+    margin: 10px;
+}
+
+.tooltip {
+    position: absolute;
+    width: 300px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 0.8em;
+    top: 10%;
+    right: 100%;
+    padding: 20px;
+    background-color: #fff;
+    text-align: justify;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px 0 rgba(212,216,229,.3), 0 0 1px 0 rgba(0,0,0,.4);
+    box-sizing: border-box;
+    border: 0;
+}
+
+.inputSection {
+    margin-bottom: 20px;
+}
+
+.inputDiv, .contextDiv {
+    margin-bottom: 20px;
+}
+
+.inputSection textarea {
+    text-align: justify;
+    border-radius: 10px;
+    border-color: rgb(200, 200, 200);
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 10px;
+    resize: none;
+}
+
+.input-context {
+    height: 50px;
+}
+
+.contextDiv .contextButton {
+    color: skyblue;
+}
+
+.generate-button {
+    margin: 0 auto;
+    width: 60px;
+    font-size: 1.2rem;
+    padding: 3px;
+    border-radius: 8px;
+    border: #aaaaaa 1px solid;
+    transition: all 0.3s;
+}
+
+.generate-button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #222222;
+}

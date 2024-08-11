@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    include: API-KEY
+
+openai:
+  api-key: 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

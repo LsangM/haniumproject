@@ -1,0 +1,492 @@
+.onboarding {
+    background: rgb(240, 240, 240);
+    word-break: keep-all;
+} 
+
+.onboarding .title {
+    font-size: 4rem;
+} 
+
+.onboarding .description {
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+.onboarding .footer {
+    margin-top: 200px;
+    display: inline-block;
+    width: auto;
+    height: 150px;
+    letter-spacing: 5px;
+    color: #101010;
+    font-weight: bold;
+    font-size: 7rem;
+    text-align: justify;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+/* --------------------------- 헤더 --------------------------- */
+
+.button-wrapper {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 999;
+}
+
+.onboarding .header button {
+    font-family: 'Noto Sans KR';
+    font-size: 1.2rem;
+    font-weight: normal;
+    background: none;
+    border: none;
+    position: relative;
+}
+
+.onboarding .header button:hover {
+    cursor: pointer;
+}
+
+.onboarding .header button:after {
+    content: '';
+    width: 0%;
+    height: 0.5px;
+    position: absolute;
+    background: #636363;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+}
+
+.onboarding .header button:hover:after {
+    width: 80%;
+}
+
+
+/* --------------------------- 페이지 01 --------------------------- */
+
+.page01 {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 4rem;
+    margin-top: 0px;
+
+    color: #101010;
+    padding: 40px;
+}
+
+.page01 .left {
+    text-align: right;
+    filter: blur(10px);
+    opacity: 0;
+    /* 초기에 숨김 */
+    animation: fadeInFromRight 1s 2s forwards;
+    transform: translateX(+30px);
+    /* 초기 위치 설정 */
+}
+
+.page01 .center {
+    position: relative;
+    max-width: 600px;
+    margin-left: 40px;
+    margin-right: 40px;
+    filter: blur(10px);
+    opacity: 0;
+    /* 초기에 숨김 */
+    animation: fadeIn 1s 1s ease-in-out forwards;
+}
+
+.page01 .right {
+    text-align: left;
+    filter: blur(10px);
+    opacity: 0;
+    /* 초기에 숨김 */
+    animation: fadeInFromLeft 1s 2s forwards;
+    transform: translateX(-30px);
+    /* 초기 위치 설정 */
+}
+
+.page01 img {
+    max-width: 100%;
+}
+
+@keyframes fadeIn {
+    0% {
+        filter: blur(10px);
+        opacity: 0;
+    }
+
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        filter: blur(0px);
+        opacity: 1;
+
+    }
+
+    100% {
+        filter: blur(10px);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInFromLeft {
+    0% {
+        filter: blur(25px);
+        opacity: 0;
+        transform: translateX(-30px);
+        /* 시작 위치 (왼쪽으로 이동) */
+    }
+
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+        transform: translateX(0);
+        /* 종료 위치 (오른쪽으로 이동) */
+    }
+}
+
+@keyframes fadeInFromRight {
+    0% {
+        filter: blur(25px);
+        opacity: 0;
+        transform: translateX(+30px);
+        /* 시작 위치 (왼쪽으로 이동) */
+    }
+
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+        transform: translateX(0);
+        /* 종료 위치 (오른쪽으로 이동) */
+    }
+}
+
+.page02,
+.page03,
+.page04 {
+    opacity: 0;
+    filter: blur(30px);
+    transition: all 0.7s;
+}
+
+/* --------------------------- 페이지 02 --------------------------- */
+
+.page02 {
+    padding: 0px;
+    background-image: url('../../../public/img/background/bg01.jpg');
+    background-position: center;
+    color: white;
+    display: flex;
+
+}
+
+.page02 .page02-wrapper {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.page02 .title {
+    margin-bottom: 80px;
+}
+
+.page02 .selectables-container {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    justify-content: space-between;
+    align-content: center;
+    text-align: left;
+}
+
+.page02 .selectables-container .selectable {
+    border: 1px solid #b8b8b8;
+    width: 100%;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.2s;
+    word-break: keep-all;
+}
+
+.page02 .selectables-container .selectable:hover {
+    background-color: rgb(240, 240, 240);
+    color: #101010;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.not-selected {
+    animation: fadeOut 1.3s;
+    opacity: 0;
+}
+
+/* --------------------------- 페이지 03 --------------------------- */
+
+.page03 {
+    margin-top: 400px;
+}
+
+.page03 .description {
+    margin-bottom: 100px;
+}
+
+.card-container {
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: all 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.page03 img {
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+}
+
+.card-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #10101051;
+}
+
+.card-content div {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --------------------------- 페이지 04 --------------------------- */
+
+.page04 {
+    margin-top: 400px;
+}
+
+.page04-container {
+    margin-top: 100px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.page-ex {
+    width: 720px;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 20px;
+}
+
+.sidebar-ex {
+    width: 60%;
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 30px 0 0 30px;
+}
+
+.content-ex {
+    width: 100%;
+    background: rgb(250, 250, 250);
+    border-radius: 0 30px 30px 0;
+    padding: 20px;
+}
+
+.work-ex {
+    margin-bottom: 10px;
+    height: 60px;
+    color: rgb(240, 240, 240);
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    animation: de-selected 0.5s;
+    font-weight: bold;
+}
+
+.selected {
+    background-color: rgb(240, 240, 240);
+    color: #101010;
+    animation: selected 0.5s ease;
+}
+
+@keyframes selected {
+    0% {
+        background-color: rgba(240, 240, 240, 0);
+    }
+
+    100% {
+        background-color: rgb(240, 240, 240);
+    }
+}
+
+@keyframes de-selected {
+    0% {
+        background-color: rgb(240, 240, 240);
+    }
+
+    100% {
+        background-color: rgba(240, 240, 240, 0);
+    }
+}
+
+.result-ex {
+    margin-top: 40px;
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+.result-ex p {
+    transform: translateY(80px);
+    animation: popUp 0.8s forwards;
+}
+
+@keyframes popUp {
+    0% {
+        filter: blur(10px);
+        transform: translateY(80px);
+    }
+
+    100% {
+        filter: blur(0px);
+        transform: translateY(0px);
+    }
+}
+
+/* --------------------------- 페이지 05 --------------------------- */
+
+.page05 {
+    margin-top: 400px;
+}
+
+.page05 .description {
+    margin-bottom: 100px;
+}
+
+.page05 .container {
+    display: inline;
+}
+
+.page05 .container div {
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.paragraph01 {
+    background-color: #fbfbfb;
+    animation: p01 6s infinite;
+    animation-delay: 1s;
+}
+
+.paragraph02 {
+    background-color: #caff1c;
+}
+
+.paragraph03 {
+    color: white;
+    background-color: #080808;
+}
+
+.paragraph04 {
+    background-color: #fff42a;
+    
+}
+
+.paragraph05 {
+    background-color: #fbfbfb;
+    animation: p02 6s infinite;
+    animation-delay: 5.2s;
+}
+
+@keyframes p01 {
+    0% {
+        transform: translateX(0px);
+        background-color: #fbfbfb;
+    }
+    20% {
+        transform: translateX(100px);
+        background-color: #fbfbfb;
+    }
+    40% {
+        transform: translateX(100px);
+        background-color: #ff5f2a;
+    }
+    60% {
+        transform: translateX(0px);
+        background-color: #ff5f2a;
+    }
+    100% {
+        transform: translateX(0px);
+        background-color: #fbfbfb;
+    }
+}
+
+@keyframes p02 {
+    0% {
+        transform: translateX(0px);
+        background-color: #fbfbfb;
+    }
+    20% {
+        transform: translateX(-100px);
+        background-color: #fbfbfb;
+    }
+    40% {
+        transform: translateX(-100px);
+        background-color: #603cff;
+    }
+    60% {
+        transform: translateX(0px);
+        background-color: #603cff;
+    }
+    100% {
+        transform: translateX(0px);
+        background-color: #fbfbfb;
+    }
+}

@@ -1,0 +1,28 @@
+.button {
+    font-family: 'Noto Sans KR';
+    font-size: 1.2rem;
+    font-weight: normal;
+    background: none;
+    border: none;
+    position: relative;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:after {
+    content: '';
+    width: 0%;
+    height: 0.5px;
+    position: absolute;
+    background: #636363;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+}
+
+.button:hover:after {
+    width: 100%;
+}

@@ -1,0 +1,63 @@
+.headerDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.headerDiv div.sidebarButton {
+    top: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.titleDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.titleDiv span {
+    margin-left: 10px;
+    font-size: 1.4em;
+    font-weight: normal;
+}
+
+.headerDiv a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.myPage-button {
+    font-family: 'Noto Sans KR';
+    font-size: 1.2rem;
+    font-weight: normal;
+    background: none;
+    border: none;
+    position: relative;
+}
+
+.myPage-button:hover {
+    cursor: pointer;
+}
+
+.myPage-button:after {
+    content: '';
+    width: 0%;
+    height: 0.5px;
+    position: absolute;
+    background: #636363;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+}
+
+.myPage-button:hover:after {
+    width: 100%;
+}
